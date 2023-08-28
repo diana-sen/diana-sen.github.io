@@ -1,0 +1,7 @@
+@use './typography/';
+@use '../abstracts/variables';
+
+
+html, body {
+  font-family: variables.$fontFamily;
+}
