@@ -1,0 +1,14 @@
+@use '../abstracts/colors';
+
+.button {
+    border: none;
+    border-radius: 5px;
+    background-color: colors.$oxford;
+    color: colors.$white;
+    padding: 10px 20px 10px 20px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: colors.$green;
+    }
+}
