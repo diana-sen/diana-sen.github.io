@@ -4,6 +4,7 @@ import Box from '../../components/Box/Box';
 import Button from '../../components/Button/Button';
 
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import Address from '../../components/Address/Address';
 const Inner = () => {
 	const [panelVisible, setPanelVisible] = useState(true);
 
@@ -22,6 +23,7 @@ const Inner = () => {
 
 			<div className='content'>
 				<Box title={boxTitle} content={boxContent}></Box>
+				<Box title={'Contacts'} content={<Address />}></Box>
 			</div>
 		</main>
 	);

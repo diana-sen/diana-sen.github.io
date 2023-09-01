@@ -1,0 +1,40 @@
+@use '../abstracts/colors';
+
+.address{
+    display: flex;
+    font-style: inherit;
+
+    .contact-list{
+        padding: 0px;
+        margin: 0;
+    }
+
+    .contact-container {
+        gap: 15px;
+        display: flex;
+        align-items: center;
+        margin: 20px 0px;
+        line-height: 19px;
+        
+        .contact-icon{
+            display: flex;
+            color: colors.$green;
+            width: 30px;
+            height: 30px;
+    
+        }
+    
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            a {
+                color: colors.$oxford;
+                text-decoration: none;
+            }
+    
+        }
+
+}
+
+
+}
