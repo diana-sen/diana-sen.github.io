@@ -1,6 +1,27 @@
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 
+.row {
+    display: flex;
+    
+}
+.column1 {
+
+    min-height: 100%;
+    flex-grow: 1;
+}
+
+.column2 {
+
+    min-height: 100%;
+    flex-grow: 1;
+}
+
+.column3 {
+ 
+    min-height: 100%;
+    flex-grow: 1;
+}
 
 .inner {
     width: 100%;
@@ -8,11 +29,11 @@
     display: flex;
 
     .navigation {
-        width: 250px;
+        width: 17%;
     }
 
     .content {
-        width: 100%;
+        width: 80%;
         height: 100vh;
         margin: 30px;
         display: flex;
@@ -22,7 +43,7 @@
 
     & > .button {
         margin-top: 30px;
-        width: 35px;
+        width: 3%;
         height: 33px;
         padding: 0px;
         margin-right: 5px;

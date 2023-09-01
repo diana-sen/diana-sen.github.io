@@ -53,5 +53,7 @@
 }
 
 .hidden {
-transform: translateX(-250px);
+    width: 0;
+    transform: translateX(-250px);
+    transition: all 0.3s ease-in-out;
 }
