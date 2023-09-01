@@ -1,0 +1,39 @@
+@use '../abstracts/colors';
+
+
+    .navigation-list{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        margin-top: 40px;
+        list-style-type: none;
+    }
+    
+    .navigation-container{
+        display: flex;
+        flex-wrap: nowrap;
+        height: 60px;
+    }
+    
+    .navigation__link{
+        color: colors.$gray_navigation;
+        
+        .navigation__link-icon{
+            width: 14px;
+            height: 14px;
+        }
+        .navigation__link-title{
+            display: inline-block;
+            margin-left: 20px;
+        }
+    }
+
+    .navigation__link:hover{
+        color: colors.$green;
+    }
+
+    .active {
+        color: colors.$green;
+      }
+    
+  

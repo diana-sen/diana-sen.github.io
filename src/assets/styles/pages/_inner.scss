@@ -1,0 +1,100 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+
+.inner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+
+    .navigation {
+        width: 250px;
+    }
+
+    .content {
+        width: 100%;
+        margin: 30px;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.3s ease-in-out;
+    } 
+
+    & > .button {
+        margin-top: 30px;
+        width: 35px;
+        height: 33px;
+        padding: 0px;
+        margin-right: 5px;
+      }
+
+}
+
+@media (max-width: 700px) {
+    .inner {
+      
+        .panel {
+            padding: 20px;
+            width: 54px;
+        
+            .photo-info-container {
+                margin-top: 10px;
+                width: 54px;
+                height: 40px;
+            }
+        
+            .image-profile {
+                display: flex;
+                width: 40px;
+                height: 100px;
+                border-radius: 50%;
+                border-style: solid;
+                border-width: 1px;
+                object-fit: cover;
+                margin: 0;
+            }
+        
+            .photo-name {
+                display: none;
+            }
+        
+            .button {
+            margin: 75px auto auto auto;
+            }
+
+            .navigation {
+                width: 54px;
+            }
+
+            .navigation-list{
+                margin-top: 100px;
+                padding: 0px 20px;
+                height: 375px;
+               
+            }
+            .navigation-container{
+                display: flex;
+                flex-wrap: nowrap;
+                height: 60px;
+                width: 54px;
+            }
+            
+            .navigation__link{
+                color: colors.$gray_navigation;
+                
+                .navigation__link-icon{
+                    width: 14px;
+                    height: 14px;
+                }
+                .navigation__link-title{
+                    display: none;
+                    margin-left: 20px;
+                }
+            }
+
+            .button-title {
+                display:none;
+            }
+
+        }
+    }
+}

@@ -1,17 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Button = ({ type, onClick, icon, text }) => {
+const Button = ({ className, type, onClick, icon, text }) => {
 	return (
-		<button className='button' type={type} onClick={onClick}>
-			<span>{icon}</span>
+		<button className={className} type={type} onClick={onClick}>
+			<span>
+				<FontAwesomeIcon icon={icon} />
+			</span>
 			{text}
 		</button>
 	);
 };
 
 Button.propTypes = {
-	icon: PropTypes.node, //??
+	className: PropTypes.string,
+	icon: PropTypes.node,
 	text: PropTypes.string,
 	onClick: PropTypes.func,
 	type: PropTypes.oneOf(['button', 'submit', 'reset']),
