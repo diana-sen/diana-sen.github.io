@@ -1,0 +1,53 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.portfolio {
+    .portfolio-tabs{
+        li {
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        li::after {
+            content: "/";
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: colors.$green;
+          }
+        
+        li:first-child {
+        padding: 0;
+        }
+    
+        li:first-child::after {
+        content: "";
+        }
+    }
+
+    .project-container{
+        display: flex;
+
+        .filter-item{
+            height:20vh;
+            width: 20%;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+
+            .portfolio-image {
+                position: absolute;
+                height:20vh;
+
+
+            }
+        }
+    }
+    
+    
+    .filter-item:hover .portfolio-info-overlay {
+        height: inherit;        
+        width: 100%;
+    }
+
+}

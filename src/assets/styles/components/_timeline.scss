@@ -1,0 +1,29 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+
+.timeline-list{
+
+    padding-inline-start: 0px;
+    .expertise-container{
+        display: flex;
+        padding: 20px 0px;
+      
+
+        .expertise-list-date{
+            width: 15%;
+            margin: 0px 10px 0px 0px;
+      
+            .date {
+              color: colors.$oxford;
+              font-size: 16px;
+            }
+        }
+    
+        .expertise-list-description {
+            width: auto;
+        }
+
+    }
+   
+}

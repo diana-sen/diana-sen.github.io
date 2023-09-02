@@ -1,3 +1,7 @@
+import ladder from './../assets/images/ladder.png';
+import loupe from './../assets/images/loupe.png';
+
+//Experience
 export const EXPERIENCE_DATA = [
 	{
 		date: '2013-2014',
@@ -19,6 +23,7 @@ export const EXPERIENCE_DATA = [
 	},
 ];
 
+//Feedback
 export const FEEDBACK_DATA = [
 	{
 		feedback:
@@ -40,6 +45,7 @@ export const FEEDBACK_DATA = [
 	},
 ];
 
+// Timeline
 export const TIMELINE_DATA = [
 	{
 		date: 2001,
@@ -55,5 +61,42 @@ export const TIMELINE_DATA = [
 		date: 2012,
 		title: 'Title 2',
 		text: 'Labore esse tempor nisi non mollit enim elit ullamco veniam elit duis nostrud. Enim pariatur ullamco dolor eu sunt ad velit aute eiusmod aliquip voluptate. Velit magna labore eiusmod eiusmod labore amet eiusmod. In duis eiusmod commodo duis. Exercitation Lorem sint do aliquip veniam duis elit quis culpa irure quis nulla. Reprehenderit fugiat amet sint commodo ex.\r\n',
+	},
+];
+
+// Portfolio
+
+export const PORTFOLIO_DATA = [
+	{
+		className: 'ui',
+		title: 'Project 1',
+		description:
+			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+		image: loupe,
+		projectUrl: 'https://github.com/diana-sen/diana-sen.github.io',
+	},
+	{
+		className: 'code',
+		title: 'Project 2',
+		description:
+			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+		image: loupe,
+		projectUrl: 'https://github.com/diana-sen/courses-app-react',
+	},
+	{
+		className: ' ui code',
+		title: 'Third Project 3',
+		description:
+			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. text',
+		image: ladder,
+		projectUrl: '#project3',
+	},
+	{
+		className: 'code',
+		title: 'Project 4',
+		description:
+			'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. text',
+		image: ladder,
+		projectUrl: '#project4',
 	},
 ];
