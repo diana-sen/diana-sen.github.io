@@ -8,14 +8,14 @@ const Button = ({ className, type, onClick, icon, text }) => {
 			<span>
 				<FontAwesomeIcon icon={icon} />
 			</span>
-			{text}
+			<span className='button-title'>{text}</span>
 		</button>
 	);
 };
 
 Button.propTypes = {
 	className: PropTypes.string,
-	icon: PropTypes.node,
+	icon: PropTypes.object,
 	text: PropTypes.string,
 	onClick: PropTypes.func,
 	type: PropTypes.oneOf(['button', 'submit', 'reset']),
