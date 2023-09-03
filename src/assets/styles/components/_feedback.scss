@@ -1,0 +1,60 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+
+.feedback {
+   min-width: 500px;
+   max-width: 100%;
+ 
+    .feedback-list{
+        display: flex;
+        flex-direction: column;
+        padding-inline-start: 0px;
+        width: inherit;
+    }
+    
+    .feedback-item-container {
+        display: flex;
+        gap: 5%;
+        padding-bottom: 10px;
+        flex-direction: column;
+        
+        .info {
+            display: block;
+            background-color: colors.$gray_card;
+            border-radius: 5px;
+            padding: 12px;
+        }
+
+        .feedback-reporter-info{
+            display:flex;
+            flex-direction: row;
+            align-items: center;
+
+            .reporter-image {
+                display: flex;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border-style: solid;
+                border-width: 1px;
+                border-color: colors.$gray_card;
+                margin: 1rem;
+            }
+
+            .reporter-name {
+                display: flex;
+                font-size: 12px;
+                padding-right: 2px;
+            }
+            
+            .reporter-site {
+                display: flex;
+                color: colors.$green;
+                font-size: 12px;
+                text-decoration: none;
+            }
+        }
+    }
+
+}

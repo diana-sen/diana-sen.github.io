@@ -60,7 +60,7 @@ const Inner = () => {
 						reference={'contact'}
 					></Box>
 					<Box
-						title={'Feedback'}
+						title={'Feedbacks'}
 						content={<Feedback data={FEEDBACK_DATA} />}
 						reference={'feedback'}
 					></Box>
