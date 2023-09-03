@@ -37,7 +37,13 @@ const Address = (props) => {
 						<FontAwesomeIcon className='contact-icon' icon={contact.icon} />
 
 						<div className='contact-info'>
-							<h4>{contact.title}</h4>
+							<h4>
+								{contact.content ? (
+									contact.title
+								) : (
+									<a href={contact.href}>{contact.title}</a>
+								)}
+							</h4>
 							<a href={contact.href}>{contact.content}</a>
 						</div>
 					</li>
