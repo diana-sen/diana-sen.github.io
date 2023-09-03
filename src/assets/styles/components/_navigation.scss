@@ -5,14 +5,14 @@
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-        margin-top: 40px;
+        margin-top: 16px;
         list-style-type: none;
     }
     
     .navigation-container{
         display: flex;
         flex-wrap: nowrap;
-        height: 60px;
+        padding-top: 24px;
     }
     
     .navigation__link{
@@ -36,4 +36,13 @@
         color: colors.$green;
       }
     
+
+@media screen and (max-height: 600px) {
+    .navigation-list {
+        margin: 0px;
+        .navigation-container {
+            padding-top: 16px;
+        }
+    } 
+}
   

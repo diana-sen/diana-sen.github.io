@@ -17,7 +17,6 @@
     -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll; 
-    overflow: overlay;
 
     .timeline-item-container {
         display: flex;
@@ -26,6 +25,8 @@
         
         .timeline-date {
             display: flex;
+            padding-top:12px;
+            font-weight: bold;
         }
 
         .timeline-date::after {
@@ -41,6 +42,22 @@
             background-color: colors.$gray_card;
             border-radius: 5px;
             padding: 12px;
+            
+            h3 {
+                transform: translateY(-16px);
+            }
+        }
+
+        .info::before {
+            content: "";
+            position: relative;
+            display: flex;
+            width: 0px;
+            height: 0px;
+            border-top: 8px solid transparent;
+            border-bottom: 8px solid transparent;
+            border-right: 16px solid colors.$gray_card;
+            transform: translate(-24px, 4px);
         }
     }
 }

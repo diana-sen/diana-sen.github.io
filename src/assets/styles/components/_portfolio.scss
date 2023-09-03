@@ -51,3 +51,10 @@
     }
 
 }
+
+@media (max-width: 600px) {
+    .portfolio .project-container .filter-item {
+       width:250px;
+       height: 153px;            
+   }
+}

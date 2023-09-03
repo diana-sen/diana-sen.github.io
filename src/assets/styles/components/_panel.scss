@@ -10,8 +10,10 @@
     flex-wrap: nowrap;
     padding: 20px;
     width: 250px;
+    height: 100vh;
     align-items: center;
     transition: all 0.3s ease-in-out;
+    overflow-y: auto;
 
     .photo-info-container {
         width: 100px;
@@ -40,12 +42,21 @@
         }  
     }
 
+    .button {
+        position:fixed;
+        bottom: 20px;
+    }
+
     .navigation {
         margin-bottom: 75px;
         .navigation-list {
             padding-inline-start: 0px;
         }
     } 
+}
+
+.panel::-webkit-scrollbar {
+    display: none;
 }
 
 .visible {
@@ -55,4 +66,12 @@
 .hidden {
     width: 0;
     transform: translateX(-250px);
+}
+
+@media screen and (max-height: 600px) {
+    .panel.visible {
+        .button {
+            position: relative;
+        }
+    }
 }
