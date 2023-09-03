@@ -38,21 +38,31 @@ const Inner = () => {
 					></Button>
 				</div>
 				<div className='column3'>
-					<Box title={boxTitle} content={boxContent}></Box>
+					<Box title={boxTitle} content={boxContent} reference={'about'}></Box>
 					<Box
 						title={'Education'}
 						content={<TimeLine data={TIMELINE_DATA} />}
+						reference={'education'}
 					></Box>
 					<Box
-						title={'Expertise'}
+						title={'Experience'}
 						content={<Expertise data={EXPERIENCE_DATA} />}
+						reference={'experience'}
 					></Box>
-					<Box title={'Contacts'} content={<Address />}></Box>
-
-					<Box title={'Portfolio'} content={<Portfolio />}></Box>
+					<Box
+						title={'Portfolio'}
+						content={<Portfolio />}
+						reference={'portfolio'}
+					></Box>
+					<Box
+						title={'Contact'}
+						content={<Address />}
+						reference={'contact'}
+					></Box>
 					<Box
 						title={'Feedback'}
 						content={<Feedback data={FEEDBACK_DATA} />}
+						reference={'feedback'}
 					></Box>
 				</div>
 			</div>
