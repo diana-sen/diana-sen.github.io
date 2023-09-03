@@ -1,29 +1,52 @@
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 
-
-.timeline-list{
-
-    padding-inline-start: 0px;
-    .expertise-container{
-        display: flex;
-        padding: 20px 0px;
-      
-
-        .expertise-list-date{
-            width: 15%;
-            margin: 0px 10px 0px 0px;
-      
-            .date {
-              color: colors.$oxford;
-              font-size: 16px;
-            }
-        }
-    
-        .expertise-list-description {
-            width: auto;
-        }
-
-    }
-   
+.timeline{
+    min-height: 30vh;
+    //max-height: 80vh;
+    display: block;
+    height: 40vh;
+    max-height: 80vh;
 }
+.timeline-list{
+    display: flex;
+    flex-direction: column;
+    padding-inline-start: 0px;
+    list-style-type: none;
+    height: 100%;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+    overflow: overlay;
+
+    .timeline-item-container {
+        display: flex;
+        gap: 5%;
+        padding-bottom: 10px;
+        
+        .timeline-date {
+            display: flex;
+        }
+
+        .timeline-date::after {
+            border-left: 5px solid colors.$green;
+            content: "";
+            height: 80%;
+            left: -50%;
+            position: relative;
+            top: 28px;
+        }
+        
+        .info {
+            background-color: colors.$gray_card;
+            border-radius: 5px;
+            padding: 12px;
+        }
+    }
+}
+
+.timeline-list::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+   
+        

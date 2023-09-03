@@ -7,8 +7,13 @@ import Expertise from '../../components/Expertise/Expertise';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Address from '../../components/Address/Address';
 import TimeLine from '../../components/TimeLine/TimeLine';
-import { EXPERIENCE_DATA, TIMELINE_DATA } from '../../utils/constants';
+import {
+	EXPERIENCE_DATA,
+	FEEDBACK_DATA,
+	TIMELINE_DATA,
+} from '../../utils/constants';
 import Portfolio from '../../components/Portfolio/Portfolio';
+import Feedback from '../../components/Feedback/Feedback';
 const Inner = () => {
 	const [panelVisible, setPanelVisible] = useState(true);
 
@@ -45,6 +50,10 @@ const Inner = () => {
 					<Box title={'Contacts'} content={<Address />}></Box>
 
 					<Box title={'Portfolio'} content={<Portfolio />}></Box>
+					<Box
+						title={'Feedback'}
+						content={<Feedback data={FEEDBACK_DATA} />}
+					></Box>
 				</div>
 			</div>
 		</main>
