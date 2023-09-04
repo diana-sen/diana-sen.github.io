@@ -1,0 +1,38 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.not-found-section{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color:colors.$oxford;
+    padding: 10vh;
+    
+    .not-found-title{
+        padding-bottom: 5vh;
+        font-size: 3.25rem;
+        line-height: 4rem;
+        text-align: center;
+        color: colors.$white;
+    }
+    
+    h4 {
+        color: colors.$gray_card;
+        padding-bottom: 5vh;  
+    }
+
+    .back-link{
+        color: colors.$green;
+        font-weight: bold;
+    }
+}
+
+ 
+
+    
+
+
+
+
