@@ -5,9 +5,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Button = ({ className, type, onClick, icon, text }) => {
 	return (
 		<button className={className} type={type} onClick={onClick}>
-			<span>
-				<FontAwesomeIcon icon={icon} />
-			</span>
+			{icon && (
+				<span>
+					<FontAwesomeIcon icon={icon} />
+				</span>
+			)}
 			<span className='button-title'>{text}</span>
 		</button>
 	);
