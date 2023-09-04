@@ -1,0 +1,43 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.portfolio-info-overlay {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  padding: 20px;
+
+  height: inherit;        
+  width: inherit;
+  background: white;
+  opacity: 95%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  
+  transition: .5s ease;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    
+  }
+
+  p {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  a {
+    color: colors.$green;
+    text-decoration: underline;
+    
+  }
+}

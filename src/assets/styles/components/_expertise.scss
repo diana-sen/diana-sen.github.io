@@ -1,0 +1,56 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.expertise-list {
+    margin: 0px;
+    padding-inline-start: 0px;
+
+    .expertise-container {
+        display: flex;
+        padding-bottom: 32px;
+
+        .expertise-list-date {
+            width: 20%;
+            margin: 0px 10px 0px 0px;
+            display: flex;
+            flex-direction: column;
+
+            .date {
+              color: colors.$oxford;
+              font-size: 16px;
+            }
+        }
+    
+        .expertise-list-info {
+            width: 80%;
+        }
+    }  
+
+    .expertise-container:last-child {
+        padding-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .expertise-list {
+        
+        .expertise-container {
+            flex-direction: column;
+            
+            .expertise-list-date {
+                flex-direction: row;
+                width: 100%;
+                border-bottom: 3px solid colors.$green;
+                align-items: flex-end;
+
+                .date {
+                    margin-left: 20px;
+                }
+            }
+            
+            .expertise-list-info {
+                width: 100%;
+            }
+        }
+    }
+}

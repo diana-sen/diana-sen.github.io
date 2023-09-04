@@ -1,0 +1,124 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.row {
+    display: flex;
+}
+
+.column1 {
+    min-height: 100vh;
+    flex-grow: 1;
+    position: fixed;
+    z-index: 30;
+
+    .panel.hidden {
+        padding: 0px;
+    }
+}
+
+.column2 {
+    min-height: 100%;
+    flex-grow: 1;
+    padding: 32px 16px 0px 250px;
+    position: fixed;
+    z-index: 20;
+
+    .button {
+        width: 40px;
+        height: 40px;
+        padding: 8px 10px 8px 10px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+}
+
+.column3 {
+    min-height: 100%;
+    flex-grow: 1;
+    z-index: 10;
+    padding: 8px 10px 8px 300px;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .column1 {          
+        .panel {
+            padding: 20px;
+            width: 54px;
+        
+            .photo-info-container {
+                margin-top: 10px;
+                width: 54px;
+                height: 40px;
+            }
+        
+            .image-profile {
+                display: flex;
+                width: 40px;
+                height: 100px;
+                border-radius: 50%;
+                border-style: solid;
+                border-width: 1px;
+                object-fit: cover;
+                margin: 0;
+            }
+        
+            .photo-name {
+                display: none;
+            }
+        
+            .button {
+                padding: 7px 14px 7px 14px;
+            }
+
+            .navigation {
+                width: 54px;
+            }
+
+            .navigation-list {
+                margin-top: 16px;
+                padding: 0px 20px;
+                height: 375px;
+               
+            }
+            .navigation-container{
+                display: flex;
+                flex-wrap: nowrap;
+                width: 54px;
+            }
+            
+            .navigation__link{
+                color: colors.$gray_navigation;
+                
+                .navigation__link-icon{
+                    width: 14px;
+                    height: 14px;
+                }
+                .navigation__link-title{
+                    display: none;
+                    margin-left: 20px;
+                }
+            }
+
+            .button-title {
+                display:none;
+            }
+
+        }
+        .panel.hidden {
+            width: 0px;
+        }
+    }
+    
+    .column2 {
+        padding: 32px 16px 0px 54px;
+    }
+
+    .column2.hidden, .column3.hidden {
+        transform: translateX(-54px);     
+    }
+
+    .column3 {
+        padding: 32px 16px 0px 104px;
+    }
+}

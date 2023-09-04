@@ -1,0 +1,14 @@
+@use '../abstracts/colors';
+
+.box-title{
+    padding: 15px 20px 30px 0px;
+    
+    h2 {
+        color: colors.$green;
+    }
+
+    .box-content {
+        padding-top: 15px;
+        color: colors.$oxford
+    }
+}

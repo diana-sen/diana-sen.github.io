@@ -1,0 +1,60 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.portfolio {
+    .portfolio-tabs{
+        padding-inline-start: 0px;
+        
+        li {
+            padding-left: 5px;
+            display: inline-block;
+            cursor: pointer;
+        }
+        
+        li.selected {
+            color: colors.$green;
+            font-weight: bold;
+        }
+
+        li::after {
+            content: " / ";
+            color: colors.$green;
+          }
+    
+        li:last-child::after {
+            content: "";
+        }
+    }
+
+    .project-container{
+        display: flex;
+
+        .filter-item{
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 10px;
+            width:350px;
+            height: 215px;            
+            border-radius: 5px;
+            
+            .portfolio-image {
+                position: absolute;
+                width:inherit;
+                height: inherit;
+            }
+        }
+    }
+    
+    .filter-item:hover .portfolio-info-overlay {        
+        transform: translateY(0%);
+    }
+
+}
+
+@media (max-width: 600px) {
+    .portfolio .project-container .filter-item {
+       width:250px;
+       height: 153px;            
+   }
+}

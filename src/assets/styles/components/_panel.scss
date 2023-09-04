@@ -1,0 +1,77 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+
+.panel {
+    background-color: colors.$oxford;
+    color: colors.$white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    overflow-y: auto;
+
+    .photo-info-container {
+        width: 100px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        .image-profile {
+            display: flex;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border-style: solid;
+            border-width: 1px;
+            object-fit: cover;
+            margin: 0;
+        }
+    
+        .photo-name {
+            font-size: variables.$info_title;
+            font-weight: 700;
+            line-height: 54px;
+            margin: 0;
+            color: colors.$white;
+        }  
+    }
+
+    .button {
+        position:fixed;
+        bottom: 20px;
+    }
+
+    .navigation {
+        margin-bottom: 75px;
+        .navigation-list {
+            padding-inline-start: 0px;
+        }
+    } 
+}
+
+.panel::-webkit-scrollbar {
+    display: none;
+}
+
+.visible {
+    transform: translateX(0);
+}
+
+.hidden {
+    width: 0;
+    transform: translateX(-250px);
+}
+
+@media screen and (max-height: 600px) {
+    .panel.visible {
+        .button {
+            position: relative;
+        }
+    }
+}
