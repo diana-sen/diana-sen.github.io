@@ -95,7 +95,7 @@ export const TIMELINE_DATA = [
 	},
 	{
 		date: 2022,
-		title: 'Product Management Course,',
+		title: 'Product Management Course',
 		text: 'EPAM Systems\n\n• Developed user personas, user requirements, and features.\n• Created strategical roadmap, themes, epics, user stories, and backlog definition.\n• Planned pre-launch, launch, and post-launch strategies and activities.',
 	},
 	{
@@ -105,7 +105,7 @@ export const TIMELINE_DATA = [
 	},
 	{
 		date: 2015,
-		title: 'BSc degree in Biomedical Engineering,',
+		title: 'BSc degree in Biomedical Engineering',
 		text: 'Universidad Politécnica de Chiapas',
 	},
 ];
