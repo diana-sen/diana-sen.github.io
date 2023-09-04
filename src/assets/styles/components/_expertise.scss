@@ -1,17 +1,15 @@
 @use '../abstracts/colors';
 @use '../abstracts/variables';
 
-
 .expertise-list{
-
     padding-inline-start: 0px;
+
     .expertise-container{
         display: flex;
         padding: 20px 0px;
-      
 
         .expertise-list-date{
-            width: 15%;
+            width: 20%;
             margin: 0px 10px 0px 0px;
       
             .date {
@@ -20,10 +18,8 @@
             }
         }
     
-        .expertise-list-description {
-            width: auto;
+        .expertise-list-info {
+            width: 80%;
         }
-
-    }
-   
+    }  
 }

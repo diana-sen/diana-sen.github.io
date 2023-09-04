@@ -1,7 +1,8 @@
 //icons
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 import {
+	faEnvelope,
+	faPhone,
 	faUser,
 	faGraduationCap,
 	faPen,
@@ -71,7 +72,7 @@ export const EXPERIENCE_DATA = [
 			company: 'EPAM Systems',
 			job: 'Junior Software Engineer',
 			description:
-				'•Create UIs based on design and technical requirements using React, HTML, CSS, SASS, as well as implementing routing and state management with third-party libraries such as React Router and Redux.\n•Perform unit and integration testing with React Testing Library and Jest.',
+				'• Create UIs based on design and technical requirements using React, HTML, CSS, SASS, as well as implementing routing and state management with third-party libraries such as React Router and Redux.\n• Perform unit and integration testing with React Testing Library and Jest.',
 		},
 	},
 	{
@@ -95,7 +96,7 @@ export const TIMELINE_DATA = [
 	{
 		date: 2022,
 		title: 'Product Management Course,',
-		text: 'EPAM Systems\n\n•Developed user personas, user requirements, and features.\n•Created strategical roadmap, themes, epics, user stories, and backlog definition.\n•Planned pre-launch, launch, and post-launch strategies and activities.',
+		text: 'EPAM Systems\n\n• Developed user personas, user requirements, and features.\n• Created strategical roadmap, themes, epics, user stories, and backlog definition.\n• Planned pre-launch, launch, and post-launch strategies and activities.',
 	},
 	{
 		date: 2021,
