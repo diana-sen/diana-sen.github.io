@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Info from '../Info/Info';
 
 const Expertise = ({ data }) => {
@@ -19,6 +20,10 @@ const Expertise = ({ data }) => {
 			))}
 		</ul>
 	);
+};
+
+Expertise.propTypes = {
+	data: PropTypes.array,
 };
 
 export default Expertise;

@@ -5,7 +5,7 @@ const Info = ({ text, children }) => {
 	return (
 		<div className='info'>
 			{children}
-			<p>{text}</p>
+			<p className='info-details'>{text}</p>
 		</div>
 	);
 };

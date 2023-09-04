@@ -11,7 +11,7 @@ const Home = () => {
 		<main className='app-home'>
 			<PhotoBox
 				name='Diana Sen'
-				title='Programmer. Creative. Innovator'
+				title='Front-End Developer and Biomedical Engineer'
 				description='Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque'
 				avatar={avatar}
 			/>

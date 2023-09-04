@@ -1,17 +1,11 @@
 import Isotope from 'isotope-layout';
 
-import PortfolioInfo from './PortfolioInfo';
+import PortfolioInfo from '../PortfolioInfo/PortfolioInfo';
 import { useEffect, useRef, useState } from 'react';
 
-import { PORTFOLIO_DATA } from '../../utils/constants';
+import { CATEGORIES_DATA, PORTFOLIO_DATA } from '../../utils/constants';
 
 export default function Portfolio() {
-	const CATEGORIES_DATA = [
-		{ selector: '*', label: 'All' },
-		{ selector: '.ui', label: 'UI' },
-		{ selector: '.code', label: 'Code' },
-	];
-
 	const isotope = useRef(null);
 	const [selectedFilter, setSelectedFilter] = useState('*');
 

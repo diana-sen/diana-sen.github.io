@@ -1,14 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Info from '../Info/Info';
+import { getHostName } from '../../utils/helpers';
 
 const Feedback = ({ data }) => {
-	const getHostName = (originalUrl) => {
-		const urlObject = new URL(originalUrl);
-		console.log(urlObject);
-		const strippedUrl = urlObject.hostname;
-		return strippedUrl;
-	};
-
 	return (
 		<div className='feedback'>
 			<ul className='feedback-list'>
@@ -34,6 +29,10 @@ const Feedback = ({ data }) => {
 			</ul>
 		</div>
 	);
+};
+
+Feedback.propTypes = {
+	data: PropTypes.array,
 };
 
 export default Feedback;

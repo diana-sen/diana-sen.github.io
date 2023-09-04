@@ -1,34 +1,8 @@
 import React from 'react';
-
-import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { CONTACTS_DATA } from '../../utils/constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-const Address = (props) => {
-	const CONTACTS_DATA = [
-		{
-			icon: faPhone,
-			title: '+522751109',
-			href: 'tel:+522751109',
-		},
-		{
-			icon: faEnvelope,
-			title: 'diana.sensalinas@gmail.com',
-			href: 'mailto:diana.sensalinas@gmail.com',
-		},
-		{
-			title: 'LinkedIn',
-			icon: faLinkedin,
-			content: 'Diana Sen',
-			href: 'https://www.linkedin.com/in/dianasen/',
-		},
-		{
-			title: 'GitHub',
-			icon: faGithub,
-			content: 'diana-sen',
-			href: 'https://github.com/diana-sen',
-		},
-	];
+const Address = () => {
 	return (
 		<address className='address'>
 			<ul className='contact-list'>

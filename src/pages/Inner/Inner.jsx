@@ -8,6 +8,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import Address from '../../components/Address/Address';
 import TimeLine from '../../components/TimeLine/TimeLine';
 import {
+	ABOUT_DATA,
 	EXPERIENCE_DATA,
 	FEEDBACK_DATA,
 	TIMELINE_DATA,
@@ -21,24 +22,25 @@ const Inner = () => {
 		setPanelVisible(!panelVisible);
 	};
 
-	const boxTitle = 'About me';
-	const boxContent =
-		'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque';
 	return (
 		<main>
 			<div className='row'>
 				<div className='column1'>
 					<Panel isVisible={panelVisible} />
 				</div>
-				<div className='column2'>
+				<div className={`column2 ${panelVisible ? 'visible' : 'hidden'}`}>
 					<Button
 						className='button'
 						onClick={togglePanel}
 						icon={faBars}
 					></Button>
 				</div>
-				<div className='column3'>
-					<Box title={boxTitle} content={boxContent} reference={'about'}></Box>
+				<div className={`column3 ${panelVisible ? 'visible' : 'hidden'}`}>
+					<Box
+						title={ABOUT_DATA.title}
+						content={ABOUT_DATA.content}
+						reference={'about'}
+					></Box>
 					<Box
 						title={'Education'}
 						content={<TimeLine data={TIMELINE_DATA} />}

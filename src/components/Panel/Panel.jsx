@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import PhotoBox from '../PhotoBox/PhotoBox';
 import Button from '../Button/Button';
@@ -18,6 +19,7 @@ const Panel = ({ isVisible }) => {
 				<Navigation />
 				<Button
 					className={'button'}
+					type={'button'}
 					text={'Go back'}
 					icon={faChevronLeft}
 					onClick={() => navigate('/')}
@@ -27,6 +29,8 @@ const Panel = ({ isVisible }) => {
 	);
 };
 
-//Panel.propTypes = {}
+Panel.propTypes = {
+	isVisible: PropTypes.bool,
+};
 
 export default Panel;

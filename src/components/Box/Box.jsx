@@ -13,6 +13,7 @@ const Box = ({ title, content, reference }) => {
 Box.propTypes = {
 	title: PropTypes.string,
 	content: PropTypes.node,
+	reference: PropTypes.string,
 };
 
 export default Box;
