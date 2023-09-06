@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Info from '../Info/Info';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchEducationData } from '../../features/education/educationSlice';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRotate } from '@fortawesome/free-solid-svg-icons';
-import Info from '../Info/Info';
 
-const TimeLine = ({ data, isLoading, hasError }) => {
+const TimeLine = () => {
+	const dispatch = useDispatch();
+	const data = useSelector((state) => state.getEducationReducer.educationData);
+	const isLoading = useSelector((state) => state.getEducationReducer.isLoading);
+	const hasError = useSelector((state) => state.getEducationReducer.hasError);
+
+	useEffect(() => {
+		dispatch(fetchEducationData());
+	}, [dispatch]);
+
 	if (!isLoading && !hasError) {
 		return (
 			<div className='timeline'>
@@ -19,7 +31,8 @@ const TimeLine = ({ data, isLoading, hasError }) => {
 				</ul>
 			</div>
 		);
-	} else if (isLoading) {
+	}
+	if (isLoading) {
 		return (
 			<div className='timeline-load'>
 				<FontAwesomeIcon className='timeline-icon' icon={faRotate} />

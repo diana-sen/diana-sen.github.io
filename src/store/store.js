@@ -3,6 +3,6 @@ import educationReducer from '../features/education/educationSlice';
 
 export const store = configureStore({
 	reducer: {
-		fetchEducation: educationReducer,
+		getEducationReducer: educationReducer,
 	},
 });
