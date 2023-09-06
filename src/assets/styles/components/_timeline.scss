@@ -63,5 +63,36 @@
 .timeline::-webkit-scrollbar {
     display: none; /* for Chrome, Safari, and Opera */
 }
-   
-        
+
+.timeline-load {
+    min-height: 30vh;
+    max-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeline-icon {
+    height: 25px;
+    width: 25px;
+    color: colors.$green;
+    align-self: center;
+    animation: rotation 2s infinite linear ;
+}
+
+.timeline-error {
+    height:30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:red;
+    font-size: 14px;
+}
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
