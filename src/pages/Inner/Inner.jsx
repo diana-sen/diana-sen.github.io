@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import Panel from '../../components/Panel/Panel';
 import Box from '../../components/Box/Box';
@@ -16,6 +16,7 @@ import {
 } from '../../utils/constants';
 import Portfolio from '../../components/Portfolio/Portfolio';
 import Feedback from '../../components/Feedback/Feedback';
+import Skills from '../../components/Skills/Skills';
 
 const Inner = () => {
 	const [panelVisible, setPanelVisible] = useState(true);
@@ -53,6 +54,7 @@ const Inner = () => {
 						content={<Expertise data={EXPERIENCE_DATA} />}
 						reference={'experience'}
 					></Box>
+					<Box title={'Skills'} content={<Skills />} reference={'skills'}></Box>
 					<Box
 						title={'Portfolio'}
 						content={<Portfolio />}

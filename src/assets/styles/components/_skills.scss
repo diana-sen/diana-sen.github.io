@@ -1,0 +1,133 @@
+@use '../abstracts/colors';
+@use '../abstracts/variables';
+
+.skills-container {
+    padding-inline-start: 0px;
+    list-style: none;
+
+    .skills-button-container{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        height: 0px;
+        justify-content: flex-end;
+
+        .button-skills {
+            width: 145px;
+            height: 40px;
+            top: -50px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    }
+
+    .skill-bar {
+        background-color: colors.$green;
+        margin-bottom: 5px;
+        height: 29px;
+        color: colors.$white;
+        text-indent: 10px;
+        font-size: 16px;
+    }
+
+    .skills-x-axis {
+        font-size: 0.7em;
+        color: colors.$gray_navigation;
+    
+        .axis-lines {
+            display: flex;
+            .axis-section{
+                width: 33.3%;
+                height: 8px;
+    
+                border-left: 1px solid colors.$gray_navigation;             
+                border-bottom: 1px solid colors.$gray_navigation;        
+            }
+    
+            :last-child {
+                border-right: 1px solid colors.$gray_navigation;
+            }
+        }
+    
+        .axis-legend {
+            display: flex;
+    
+            :first-child {
+                width: 16.67%;      
+                text-align: left;      
+            }
+    
+            :last-child {
+                width: 16.67%;
+                text-align: right;         
+            }
+    
+            :not(:first-child):not(:last-child) {
+                width: 33.33%;
+                text-align: center;
+            }
+        }
+    }
+    
+
+    .skills-load {
+        min-height: 30vh;
+        max-height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills-load-icon {
+        height: 25px;
+        width: 25px;
+        color: colors.$green;
+        align-self: center;
+        animation: rotation 2s infinite linear ;
+    }
+    
+    .skills-error {
+        height:30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color:red;
+        font-size: 14px;
+    }
+}
+
+
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+
+@media (max-width: 600px) {
+    
+    .axis-item {
+        height: 55px;
+        display: flex;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        padding-bottom: 4px;    
+        justify-content: flex-end;        
+    }
+    
+    :first-child {
+        align-items: flex-start;
+    }
+
+    :last-child {
+        align-items: end;
+    }
+
+    :not(:first-child):not(:last-child) {
+        align-items: center;
+    }
+}
+

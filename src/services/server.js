@@ -41,7 +41,7 @@ export default function server() {
 					return [
 						{
 							name: 'React',
-							range: 70,
+							range: 100,
 						},
 						{
 							name: 'JavaScript',
