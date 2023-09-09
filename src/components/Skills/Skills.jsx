@@ -4,12 +4,20 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchSkillsData } from '../../features/skills/skillsSlice';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPen, faRotate } from '@fortawesome/free-solid-svg-icons';
+import { toggleForm } from '../../features/skills/skillsSlice';
+
+import SkillsForm from '../SkillsForm/SkillsForm';
 
 const Skills = () => {
 	const dispatch = useDispatch();
-	const skillsData = useSelector((state) => state.getSkillsReducer.skillsData);
-	const isLoading = useSelector((state) => state.getSkillsReducer.isLoading);
-	const hasError = useSelector((state) => state.getSkillsReducer.hasError);
+	const skillsData =
+		useSelector((state) => state.SkillsReducer.skillsData) || [];
+	const isLoading = useSelector((state) => state.SkillsReducer.isLoading);
+	const hasError = useSelector((state) => state.SkillsReducer.hasError);
+
+	const isSkillsFormOpen = useSelector(
+		(state) => state.SkillsReducer.isFormOpen
+	);
 
 	useEffect(() => {
 		dispatch(fetchSkillsData());
@@ -25,13 +33,17 @@ const Skills = () => {
 							text='Open edit'
 							type='button'
 							icon={faPen}
-							onClick={() => console.log('open skills form')}
+							onClick={() => {
+								dispatch(toggleForm());
+							}}
 						/>
 					</div>
+					{isSkillsFormOpen && <SkillsForm />}
+
 					<ul className='skills-container'>
-						{skillsData.map((skill) => (
+						{skillsData.map((skill, index) => (
 							<li
-								key={skill.name}
+								key={`${skill.name}-${index}`}
 								className='skill-bar'
 								style={{ width: `${skill.range}%` }}
 							>

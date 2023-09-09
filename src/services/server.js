@@ -38,27 +38,20 @@ export default function server() {
 			this.get(
 				'/skills',
 				() => {
-					return [
-						{
-							name: 'React',
-							range: 100,
-						},
-						{
-							name: 'JavaScript',
-							range: 60,
-						},
-						{
-							name: 'HTML',
-							range: 80,
-						},
-						{
-							name: 'CSS',
-							range: 50,
-						},
-					];
+					return getSkills();
 				},
 				{ timing: 3000 }
 			);
+
+			this.post('/skills', (schema, request) => {
+				let attrs = JSON.parse(request.requestBody);
+				return { ...attrs };
+			});
 		},
 	});
 }
+
+export const getSkills = () => {
+	let data = localStorage.getItem('skills');
+	return JSON.parse(data);
+};
