@@ -5,20 +5,22 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Address = () => {
 	return (
 		<address className='address'>
-			<ul className='contact-list'>
+			<ul className='contact-list' aria-label='contacts-list'>
 				{CONTACTS_DATA.map((contact) => (
 					<li key={contact.title} className='contact-container'>
 						<FontAwesomeIcon className='contact-icon' icon={contact.icon} />
 
 						<div className='contact-info'>
-							<h4>
-								{contact.content ? (
-									contact.title
-								) : (
-									<a href={contact.href}>{contact.title}</a>
-								)}
-							</h4>
-							<a href={contact.href}>{contact.content}</a>
+							{contact.content ? (
+								<>
+									<h4>{contact.title}</h4>
+									<a href={contact.href}>{contact.content}</a>
+								</>
+							) : (
+								<a className='contact-one-link' href={contact.href}>
+									{contact.title}
+								</a>
+							)}
 						</div>
 					</li>
 				))}
