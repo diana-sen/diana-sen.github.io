@@ -6,7 +6,7 @@ import { getHostName } from '../../utils/helpers';
 const Feedback = ({ data }) => {
 	return (
 		<div className='feedback'>
-			<ul className='feedback-list'>
+			<ul className='feedback-list' aria-label='feedback-list'>
 				{data.map((item, index) => (
 					<li
 						className='feedback-item-container'

@@ -27,7 +27,7 @@ export default function Portfolio() {
 
 	return (
 		<div className='portfolio'>
-			<ul className='portfolio-tabs'>
+			<ul className='portfolio-tabs' aria-label='categories-list'>
 				{CATEGORIES_DATA.map((filter) => (
 					<li
 						key={filter.label}

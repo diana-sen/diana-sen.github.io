@@ -4,8 +4,8 @@ import { NAVIGATION_DATA } from '../../utils/constants';
 
 const Navigation = () => {
 	return (
-		<nav className='navigation'>
-			<ul className='navigation-list'>
+		<nav className='navigation' aria-label='navigation'>
+			<ul className='navigation-list' aria-label='navigation-list'>
 				{NAVIGATION_DATA.map((item) => (
 					<li key={item.title} className='navigation-container'>
 						<a className='navigation__link' href={item.ref}>

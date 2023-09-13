@@ -2,7 +2,7 @@ import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit';
 import educationReducer from '../features/education/educationSlice';
 import skillsReducer from '../features/skills/skillsSlice';
 
-const addNewSkillToLocalStorage = (data) => {
+export const addNewSkillToLocalStorage = (data) => {
 	const localStorageData = localStorage.getItem('skills');
 	let skills;
 	if (localStorageData) {
@@ -14,7 +14,7 @@ const addNewSkillToLocalStorage = (data) => {
 	localStorage.setItem('skills', JSON.stringify(skills));
 };
 
-const postSkillMiddleware = (store) => (next) => (action) => {
+export const postSkillMiddleware = (store) => (next) => (action) => {
 	if (action.type === 'postSkillData/fulfilled') {
 		addNewSkillToLocalStorage(action.payload.data);
 	}

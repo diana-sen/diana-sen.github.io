@@ -15,7 +15,7 @@
         "statements": 60
       }
     },
-    "coveragePathIgnorePatterns": ["src/reportWebVitals.js", "src/services"]
+    "coveragePathIgnorePatterns": ["src/services", "src/utils", "src/reportWebVitals.js", "src/index.js"]
   },
   "homepage": "https://diana-sen.github.io",
   "dependencies": {
@@ -41,7 +41,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:coverage": "npm test -- --coverage",
+    "test:coverage": "npm test -- --coverage --watchAll",
     "eject": "react-scripts eject",
     "eslint": "eslint --ext .js --ext .jsx src",
     "eslint:fix": "eslint --fix --ext .js --ext .jsx src",
