@@ -1,7 +1,7 @@
 import { createServer } from 'miragejs';
 
 export default function server() {
-	createServer({
+	return createServer({
 		routes() {
 			this.namespace = 'api';
 			this.urlPrefix = 'http://localhost:3000';

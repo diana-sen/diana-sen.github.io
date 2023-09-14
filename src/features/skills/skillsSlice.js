@@ -12,8 +12,12 @@ const initialState = {
 // Thunks for fetch and post data
 export const fetchSkillsData = createAsyncThunk('fetchSkillsData', async () => {
 	const response = await fetch('http://localhost:3000/api/skills');
-	const data = await response.json();
-	return data;
+	if (response.status !== 200) {
+		throw new Error('Unable to fetch data');
+	} else {
+		const data = await response.json();
+		return data;
+	}
 });
 
 export const postSkillData = createAsyncThunk('postSkillData', async (data) => {

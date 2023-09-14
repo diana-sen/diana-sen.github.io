@@ -12,7 +12,7 @@ export function renderWithProviders(
 	ui,
 	{
 		preloadedState = {
-			educationReducer: {
+			getEducationReducer: {
 				educationData: [],
 				isLoading: 'false',
 				hasError: 'false',
@@ -27,7 +27,7 @@ export function renderWithProviders(
 		// Create a store instance
 		store = configureStore({
 			reducer: {
-				educationReducer: educationSlice.reducer,
+				getEducationReducer: educationSlice.reducer,
 				skillsReducer: skillsSlice.reducer,
 			},
 			middleware: (getDefaultMiddleware) =>

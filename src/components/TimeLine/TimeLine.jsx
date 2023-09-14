@@ -19,7 +19,7 @@ const TimeLine = () => {
 	if (!isLoading && !hasError) {
 		return (
 			<div className='timeline'>
-				<ul className='timeline-list'>
+				<ul className='timeline-list' aria-label='timeline-list'>
 					{data.map((item) => (
 						<li className='timeline-item-container' key={item.title}>
 							<div className='timeline-date'>{item.date}</div>
