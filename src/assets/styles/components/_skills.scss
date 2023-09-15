@@ -110,26 +110,27 @@
   }
 
 @media (max-width: 600px) {
+    .axis-legend {
+        .axis-item {
+            height: 55px;
+            display: flex;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            padding-bottom: 4px;    
+            justify-content: flex-end;        
+        }
+        
+        :first-child {
+            align-items: flex-start;
+        }
     
-    .axis-item {
-        height: 55px;
-        display: flex;
-        writing-mode: vertical-rl;
-        transform: rotate(180deg);
-        padding-bottom: 4px;    
-        justify-content: flex-end;        
-    }
+        :last-child {
+            align-items: end;
+        }
     
-    :first-child {
-        align-items: flex-start;
-    }
-
-    :last-child {
-        align-items: end;
-    }
-
-    :not(:first-child):not(:last-child) {
-        align-items: center;
-    }
+        :not(:first-child):not(:last-child) {
+            align-items: center;
+        }
+    } 
 }
 
