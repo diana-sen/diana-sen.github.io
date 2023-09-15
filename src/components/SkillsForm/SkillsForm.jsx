@@ -38,7 +38,7 @@ const SkillsForm = () => {
 				const { isSubmitting, isValid } = props;
 				return (
 					<div className='skills-form'>
-						<Form>
+						<Form aria-label='skill-form'>
 							<div className='skill-field-container'>
 								<div className='field-label'>
 									<label htmlFor='name'>Skill name: </label>

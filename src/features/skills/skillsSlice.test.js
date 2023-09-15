@@ -35,18 +35,6 @@ describe('skillSlice', () => {
 		});
 	});
 
-	/*	test('should change the isFormOpen to true', async () => {
-		let state = store.getState();
-		console.log('before____________--', state);
-		await expect(state.skillsTestReducer.isFormOpen).toEqual(false);
-		store.dispatch(toggleForm(state));
-		state = store.getState();
-		console.log('after', state);
-		expect(state.skillsTestReducer.isFormOpen).toEqual(true);
-		//expect(state.skillsTestReducer.isFormOpen).toBeTruthy();
-	});
-	*/
-
 	test('should handle fetchSkillsData.fulfilled', async () => {
 		serverTest.get('/skills', () => {
 			return [
@@ -106,19 +94,4 @@ describe('skillSlice', () => {
 		expect(state.skillsTestReducer.isLoading).toBeFalsy();
 		expect(state.skillsTestReducer.hasError).toBeTruthy();
 	});
-
-	/*
-
-	test('should handle fetchSkillsData.fulfilled', async () => {
-		await store.dispatch(fetchEducationData({ name: 'SASS', range: 30 }));
-		const state = store.getState();
-		expect(state.reducer.educationData).toEqual([
-			{
-				name: 'SASS',
-				range: 30,
-			},
-		]);
-	});
-}
-    */
 });

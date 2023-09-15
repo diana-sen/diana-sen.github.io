@@ -1,11 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
-import { Provider } from 'react-redux';
-import { MemoryRouter } from 'react-router-dom';
-import store from './store/store';
+import { render, screen } from '@testing-library/react';
 import App from './App';
-import Home from './pages/Home/Home';
-import Inner from './pages/Inner/Inner';
-import userEvent from '@testing-library/user-event';
 import React from 'react';
 
 test('renders Home component', () => {

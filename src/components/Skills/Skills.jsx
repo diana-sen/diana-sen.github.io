@@ -39,18 +39,19 @@ const Skills = () => {
 						/>
 					</div>
 					{isSkillsFormOpen && <SkillsForm />}
-
-					<ul className='skills-container'>
-						{skillsData.map((skill, index) => (
-							<li
-								key={`${skill.name}-${index}`}
-								className='skill-bar'
-								style={{ width: `${skill.range}%` }}
-							>
-								{skill.name}{' '}
-							</li>
-						))}
-					</ul>
+					{skillsData && (
+						<ul className='skills-container'>
+							{skillsData.map((skill, index) => (
+								<li
+									key={`${skill.name}-${index}`}
+									className='skill-bar'
+									style={{ width: `${skill.range}%` }}
+								>
+									{skill.name}{' '}
+								</li>
+							))}
+						</ul>
+					)}
 					<div className='skills-x-axis'>
 						<div className='axis-lines'>
 							<div className='axis-section' />

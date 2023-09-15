@@ -4,7 +4,7 @@ import Info from '../Info/Info';
 
 const Expertise = ({ data }) => {
 	return (
-		<ul className='expertise-list'>
+		<ul className='expertise-list' aria-label='expertise-list'>
 			{data.map((item) => (
 				<li className='expertise-container' key={item.info.job}>
 					<div className='expertise-list-date'>
