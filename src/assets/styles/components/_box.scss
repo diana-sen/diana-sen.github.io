@@ -12,3 +12,17 @@
         color: colors.$oxford
     }
 }
+
+.hidden {
+    .box-title{
+        width: calc(250px + 100%);
+    }
+}
+
+@media (max-width: 600px) {
+    .hidden {
+        .box-title{
+            width: calc(54px + 100%);
+        }
+    }
+}
